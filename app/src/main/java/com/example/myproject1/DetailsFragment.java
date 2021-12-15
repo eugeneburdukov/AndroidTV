@@ -22,7 +22,7 @@ public class DetailsFragment extends DetailsSupportFragment {
 
     }
 
-    private void buildUI(){
+    private void buildUI() {
 
         ClassPresenterSelector selector = new ClassPresenterSelector();
         selector.addClassPresenter(DetailsOverviewRow.class,
@@ -31,19 +31,19 @@ public class DetailsFragment extends DetailsSupportFragment {
                 )
         );
 
-        ArrayObjectAdapter madapter =new ArrayObjectAdapter(selector);
+        ArrayObjectAdapter madapter = new ArrayObjectAdapter(selector);
         DetailsOverviewRow detailsOverview = new DetailsOverviewRow("Media Item Details");
         // Add images and action buttons to the details view
         detailsOverview
                 .setImageDrawable(getActivity()
-                                  .getResources()
-                                  .getDrawable(R.drawable.avengers)
-                                  );
+                        .getResources()
+                        .getDrawable(R.drawable.avengers)
+                );
 
         //Add some Actions
         SparseArrayObjectAdapter actionAdap = new SparseArrayObjectAdapter();
-        actionAdap.set((int)ACTION_PLAY,new Action(1, "Buy $9.99"));
-        actionAdap.set((int)ACTION_REWIND,new Action(2, "Rent $2.99"));
+        actionAdap.set((int) ACTION_PLAY, new Action(1, "Buy $9.99"));
+        actionAdap.set((int) ACTION_REWIND, new Action(2, "Rent $2.99"));
         detailsOverview.setActionsAdapter(actionAdap);
         madapter.add(detailsOverview);
         setAdapter(madapter);

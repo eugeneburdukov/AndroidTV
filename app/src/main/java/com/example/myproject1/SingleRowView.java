@@ -1,9 +1,11 @@
 package com.example.myproject1;
 
 import android.graphics.drawable.Drawable;
+
 public class SingleRowView {
     String name = "";
     Drawable image = null;
+
     public SingleRowView(String name, Drawable image) {
         this.name = name;
         this.image = image;
